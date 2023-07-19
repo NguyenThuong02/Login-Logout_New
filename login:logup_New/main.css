@@ -1,0 +1,38 @@
+.form-input{
+    padding:0 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 300px;
+    height: 50px;
+    transition: .25s ease;
+}
+
+.form-input:focus {
+    border-color: #6a5af9;
+}
+
+.form-field{
+    position: relative;
+}
+
+.form-label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    user-select: none;
+    color: #999;
+    pointer-events: none;
+    transition: 0.35s ease;
+}
+
+/* Ở đây thì khi ng dùng nhập vào ô input thì nội dung placeholder sẽ biến mất
+Lúc đó sẽ là áp dụng css này vào */
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label{
+    top: 0;
+    padding:0 10px;
+    display: inline-block;
+    background-color: white;
+    color: #6a5af9;
+}
